@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title1}}
+{% endblock %}
+
+{% block body %}
+    
+    {% for c in content %}
+        {{c|safe}}
+        <a href="{% url 'edit_entry' entry_title=title1 %}">Edit entry</a>
+    {% empty %}
+        <h1>Entry NOT FOUND</h1>
+        <h4>Check whether you correctly entered
+            the title of your entry (look at the URL)
+        </h4>
+    {%endfor%}
+
+{% endblock %}

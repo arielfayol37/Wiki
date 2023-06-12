@@ -1,0 +1,1 @@
+### Cameroon is considered to be Africa in miniature.
